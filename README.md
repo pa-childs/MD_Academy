@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## MA Academy Example Site
+This code is for fictitious Martial Arts school.  The site will allow users to log in, view there training materials, see class schedules, sign up for classes and buy equipment.
 
-Things you may want to cover:
+Admins and Instructors will have additional access on the site to set class schedules, process equipment purchases, and promote students through the ranks.
 
-* Ruby version
+#### Versions:
 
-* System dependencies
+* Rails: 6.0.3
+* Ruby: 2.7.0
+* Bootstrap: 4.5.0
 
-* Configuration
+#### Color Palette:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://coolors.co/3da5d9-3994c2-3583aa-327193-2e607c-2a4f64-263e4d-232c36-1f1b1e-1b0a07
