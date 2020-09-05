@@ -1,0 +1,48 @@
+@import "bootstrap";
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: lightgrey;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  width: 100%;
+  background-color: #232C36;
+  color: #3DA5D9;
+}
+
+.navbar {
+  background-color: #232C36 !important;
+}
+
+.navbar-brand {
+  color: #3DA5D9 !important;
+}
+
+.nav-dropdown-menu {
+  background-color: #232C36 !important;
+}
+
+.nav-link {
+  color: #3DA5D9 !important;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #2E607C !important;
+  color: #1F1B1E !important;
+}
+
+.nav-link-dd {
+  color: #3DA5D9 !important;
+}
+
+.nav-link-dd:hover {
+  background-color: #2E607C !important;
+  color: #1F1B1E !important;
+}
