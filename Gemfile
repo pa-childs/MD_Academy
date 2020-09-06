@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 4.5.2'
 gem 'jquery-rails'
 # Use Active Model has_secure_password
+gem 'devise'
 gem 'bcrypt', '~> 3.1.7'
 # Help with Rails C output
 gem 'hirb'
