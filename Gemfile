@@ -27,6 +27,8 @@ gem 'devise'
 gem 'bcrypt', '~> 3.1.7'
 # Help with Rails C output
 gem 'hirb'
+# Ruby static code analyzer and code formatter
+gem 'rubocop', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
