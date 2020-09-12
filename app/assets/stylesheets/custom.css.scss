@@ -6,6 +6,35 @@ body {
   background-color: lightgrey;
 }
 
+.link {
+  color: #2A4F64;
+}
+
+.link:hover {
+  color: #3994C2;
+  text-decoration: none;
+}
+
+.button_style {
+  background-color: #2A4F64;
+  border-width: 0;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.6s;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.button_style:hover {
+  background-color: #3994C2;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
