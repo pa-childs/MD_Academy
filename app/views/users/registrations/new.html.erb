@@ -55,12 +55,14 @@
 
         </div>
         <div class="card-footer">
-          <div class="col d-flex justify-content-start align-items-center">
+          <div class="row d-flex justify-content-start">
+            <div class="col d-flex align-items-center">
 
-            <%- if controller_name != 'sessions' %>
-              <%= link_to "Login", new_session_path(resource_name) %><br />
-            <% end %>
+              <%- if controller_name != 'sessions' %>
+                <%= link_to "Login", new_session_path(resource_name), class: "link" %><br />
+              <% end %>
 
+            </div>
           </div>
         </div>
       </div>
