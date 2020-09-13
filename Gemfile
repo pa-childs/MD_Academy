@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+# Handle ENV variables
+gem 'dotenv-rails', :require => 'dotenv/rails-now', :groups => [:development, :test]
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
