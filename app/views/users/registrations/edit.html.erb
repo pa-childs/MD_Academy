@@ -1,43 +1,81 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+  <div class="row justify-content-center mt-5 mb-5 frame">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          Edit Profile
+        </div>
+        <div class="card-body">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= render "users/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="field">
+
+              <%= f.label :first_name, "First Name:" %><br />
+              <%= f.text_field :first_name, autofocus: true %>
+
+            </div>
+            <br />
+            <div class="field">
+
+              <%= f.label :last_name, "Last Name:" %><br />
+              <%= f.text_field :last_name, autofocus: true %>
+
+            </div>
+            <br />
+            <div class="field">
+
+              <%= f.label :email, "Email:" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+            </div>
+            <br />
+            <div class="field">
+
+              <%= f.label :current_password, "Current Password:" %> <br />
+              <%= f.password_field :current_password, autocomplete: "current-password" %> <br />
+
+            </div>
+            <br />
+            
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+              <br />
+            <% end %>
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Change Password</h5>
+                <p class="card-text">Fill in the fields below to change your password.</p>
+
+                <div class="field">
+
+                  <%= f.label :password, "New Password:" %> <br />
+                  <%= f.password_field :password, autocomplete: "new-password" %> <br />
+
+                </div>
+                <br />
+                <div class="field">
+
+                  <%= f.label :password_confirmation, "Confirm New Password:" %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="actions">
+
+              <%= f.submit "Update Profile", class: "button_style" %>
+              <%= link_to "Back", :back, class: "button_style" %>
+
+            </div>
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

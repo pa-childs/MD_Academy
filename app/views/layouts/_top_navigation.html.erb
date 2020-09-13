@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-classes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Classes
         </a>
         <div class="dropdown-menu nav-dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,15 +31,32 @@
 
       <% end %>
 
-      <li class="nav-item">
+      <% if user_signed_in?%>
 
-        <% if user_signed_in?%>
-          <%= link_to "Log Out", destroy_user_session_path, class: "nav-link", method: :delete %>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Welcome, <%= current_user.first_name %> <%= current_user.last_name %>
+        </a>
+        <div class="dropdown-menu nav-dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <a class="dropdown-item nav-link-dd" href="#">Rank History</a>
+            <a class="dropdown-item nav-link-dd" href="#">Training Sylabus</a>
+
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item nav-link-dd" %>
+            <%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item nav-link-dd", method: :delete %>
+
+          </div>
+        </li>
+
         <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        <% end %>
 
-      </li>
+          <li class="nav-item">
+
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+
+          </li>
+
+        <% end %>
 
     </ul>
   </div>
