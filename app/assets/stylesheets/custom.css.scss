@@ -44,6 +44,15 @@ body {
   color: #3DA5D9;
 }
 
+.jumbotron {
+  background-image: asset-url('dojo.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  color: #3DA5D9;
+}
+
 .navbar {
   background-color: #232C36 !important;
 }
